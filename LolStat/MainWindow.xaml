@@ -18,8 +18,11 @@
             <TabItem Header="Import">
                 <Grid Background="#FFE5E5E5">
                     <StackPanel>
-                        <RichTextBox Height="700"></RichTextBox>
-                        <Button Height="40">Import</Button>
+                        <TextBox Height="700"
+                                 Text="{Binding ImportText, UpdateSourceTrigger=PropertyChanged}"
+                                 TextWrapping="Wrap"
+                                 AcceptsReturn="True"/>
+                        <Button Height="40" Command="{Binding ImportCommand}">Import</Button>
                     </StackPanel>
                 </Grid>
             </TabItem>

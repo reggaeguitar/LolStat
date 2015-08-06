@@ -5,10 +5,10 @@ namespace DAL.Model
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class LolStatModel : DbContext
+    public partial class LolStatModel : DbContext, ILolStatModel
     {
-        public LolStatModel()
-            : base("name=LolStatModel")
+        public LolStatModel(string appConfigName)
+            : base("name=" + appConfigName)
         {
         }
 
@@ -35,4 +35,6 @@ namespace DAL.Model
                 .WillCascadeOnDelete(false);
         }
     }
+
+    
 }
