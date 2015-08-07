@@ -101,6 +101,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="LolStatInterfaces.cs" />
+    <Compile Include="Models\DatabaseChecker.cs" />
+    <Compile Include="Models\DatabaseSeeder.cs" />
+    <Compile Include="Models\Extensions.cs" />
+    <Compile Include="Models\SeedDataReader.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -176,7 +180,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\" />
+    <Content Include="SeedData.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

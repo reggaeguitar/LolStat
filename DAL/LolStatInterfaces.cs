@@ -6,10 +6,10 @@ namespace DAL
 {
     public interface ILolStatModel : IDisposable
     {
-        IDbSet<Champion> Champions { get; set; }
-        IDbSet<Game> Games { get; set; }
-        IDbSet<GameType> GameTypes { get; set; }
-        IDbSet<Map> Maps { get; set; }
+        DbSet<Champion> Champions { get; set; }
+        DbSet<Game> Games { get; set; }
+        DbSet<GameType> GameTypes { get; set; }
+        DbSet<Map> Maps { get; set; }
         int SaveChanges();
     }
 

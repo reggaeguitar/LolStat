@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 using DataImporter;
 using GalaSoft.MvvmLight;
@@ -14,11 +15,18 @@ namespace LolStat.ViewModels
     {
         // dependencies
         private readonly IDataImporterClass _dataImporter;
+        private readonly IDatabaseChecker _databaseChecker;
+        private readonly IDatabaseSeeder _databaseSeeder;
         
         // ctor
-        public MainViewModel(IDataImporterClass dataImporter)
+        public MainViewModel(
+            IDataImporterClass dataImporter,
+            IDatabaseChecker databaseChecker,
+            IDatabaseSeeder databaseSeeder)
         {
             _dataImporter = dataImporter;
+            _databaseChecker = databaseChecker;
+            _databaseSeeder = databaseSeeder;
 
             ImportCommand = new RelayCommand(Import);
         }
@@ -26,7 +34,8 @@ namespace LolStat.ViewModels
         // commands
         public ICommand ImportCommand { get; private set; }
 
-        // bindable properties
+        #region bindable properties
+
         private string _importText;
         public string ImportText
         {
@@ -38,11 +47,17 @@ namespace LolStat.ViewModels
                 RaisePropertyChanged(() => ImportText);
             }
         }
+        #endregion
 
         // methods
         private void Import()
         {
+            if (!_databaseChecker.HasNonGameData())
+            {
+                _databaseSeeder.Seed();
+            }
             _dataImporter.Import(ImportText);
+            MessageBox.Show("Import successful!");
         }
     }
 }

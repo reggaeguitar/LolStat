@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <gameTypes>
+    <gameType>Normal (Team Builder)</gameType>
+    <gameType>Normal (Draft Mode)</gameType>
+    <gameType>Coop vs AI</gameType>
+    <gameType>Normal (Blind Pick)</gameType>
+    <gameType>Normal (All Random)</gameType>
+    <gameType>Ranked (Draft Mode)</gameType>
+    <gameType>Custom</gameType>
+    <gameType>U.R.F. (Blind Draft)</gameType>
+    <gameType>Ranked Team</gameType>
+    <gameType>Legend of the Poro King</gameType>
+  </gameTypes>
+  <maps>
+    <map>Summoner's Rift</map>
+    <map>Howling Abyss</map>
+    <map>The Crystal Scar</map>
+    <map>Twisted Treeline</map>
+    <map>Butcher's Bridge</map>
+  </maps>
+  <champions>
+    <champion>Aatrox</champion>
+    <champion>Ahri</champion>
+    <champion>Akali</champion>
+    <champion>Alistar</champion>
+    <champion>Amumu</champion>
+    <champion>Anivia</champion>
+    <champion>Annie</champion>
+    <champion>Ashe</champion>
+    <champion>Azir</champion>
+    <champion>Bard</champion>
+    <champion>Blitzcrank</champion>
+    <champion>Brand</champion>
+    <champion>Braum</champion>
+    <champion>Caitlyn</champion>
+    <champion>Cassiopeia</champion>
+    <champion>Cho'Gath</champion>
+    <champion>Corki</champion>
+    <champion>Darius</champion>
+    <champion>Diana</champion>
+    <champion>Dr. Mundo</champion>
+    <champion>Draven</champion>
+    <champion>Ekko</champion>
+    <champion>Elise</champion>
+    <champion>Evelynn</champion>
+    <champion>Ezreal</champion>
+    <champion>Fiddlesticks</champion>
+    <champion>Fiora</champion>
+    <champion>Fizz</champion>
+    <champion>Galio</champion>
+    <champion>Gangplank</champion>
+    <champion>Garen</champion>
+    <champion>Gnar</champion>
+    <champion>Gragas</champion>
+    <champion>Graves</champion>
+    <champion>Hecarim</champion>
+    <champion>Heimerdinger</champion>
+    <champion>Irelia</champion>
+    <champion>Janna</champion>
+    <champion>Jarvan IV</champion>
+    <champion>Jax</champion>
+    <champion>Jayce</champion>
+    <champion>Jinx</champion>
+    <champion>Kalista</champion>
+    <champion>Karma</champion>
+    <champion>Karthus</champion>
+    <champion>Kassadin</champion>
+    <champion>Katarina</champion>
+    <champion>Kayle</champion>
+    <champion>Kennen</champion>
+    <champion>Kha'Zix</champion>
+    <champion>Kog'Maw</champion>
+    <champion>LeBlanc</champion>
+    <champion>Lee Sin</champion>
+    <champion>Leona</champion>
+    <champion>Lissandra</champion>
+    <champion>Lucian</champion>
+    <champion>Lulu</champion>
+    <champion>Lux</champion>
+    <champion>Malphite</champion>
+    <champion>Malzahar</champion>
+    <champion>Maokai</champion>
+    <champion>Master Yi</champion>
+    <champion>Miss Fortune</champion>
+    <champion>Mordekaiser</champion>
+    <champion>Morgana</champion>
+    <champion>Nami</champion>
+    <champion>Nasus</champion>
+    <champion>Nautilus</champion>
+    <champion>Nidalee</champion>
+    <champion>Nocturne</champion>
+    <champion>Nunu</champion>
+    <champion>Olaf</champion>
+    <champion>Orianna</champion>
+    <champion>Pantheon</champion>
+    <champion>Poppy</champion>
+    <champion>Quinn</champion>
+    <champion>Rammus</champion>
+    <champion>Rek'Sai</champion>
+    <champion>Renekton</champion>
+    <champion>Rengar</champion>
+    <champion>Riven</champion>
+    <champion>Rumble</champion>
+    <champion>Ryze</champion>
+    <champion>Sejuani</champion>
+    <champion>Shaco</champion>
+    <champion>Shen</champion>
+    <champion>Shyvana</champion>
+    <champion>Singed</champion>
+    <champion>Sion</champion>
+    <champion>Sivir</champion>
+    <champion>Skarner</champion>
+    <champion>Sona</champion>
+    <champion>Soraka</champion>
+    <champion>Swain</champion>
+    <champion>Syndra</champion>
+    <champion>Tahm Kench</champion>
+    <champion>Talon</champion>
+    <champion>Taric</champion>
+    <champion>Teemo</champion>
+    <champion>Thresh</champion>
+    <champion>Tristana</champion>
+    <champion>Trundle</champion>
+    <champion>Tryndamere</champion>
+    <champion>Twisted Fate</champion>
+    <champion>Twitch</champion>
+    <champion>Udyr</champion>
+    <champion>Urgot</champion>
+    <champion>Varus</champion>
+    <champion>Vayne</champion>
+    <champion>Veigar</champion>
+    <champion>Vel'Koz</champion>
+    <champion>Vi</champion>
+    <champion>Viktor</champion>
+    <champion>Vladimir</champion>
+    <champion>Volibear</champion>
+    <champion>Warwick</champion>
+    <champion>Wukong</champion>
+    <champion>Xerath</champion>
+    <champion>Xin Zhao</champion>
+    <champion>Yasuo</champion>
+    <champion>Yorick</champion>
+    <champion>Zac</champion>
+    <champion>Zed</champion>
+    <champion>Ziggs</champion>
+    <champion>Zilean</champion>
+    <champion>Zyra</champion>
+  </champions>
+</root>

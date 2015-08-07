@@ -12,10 +12,10 @@ namespace DAL.Model
         {
         }
 
-        public virtual IDbSet<Champion> Champions { get; set; }
-        public virtual IDbSet<Game> Games { get; set; }
-        public virtual IDbSet<GameType> GameTypes { get; set; }
-        public virtual IDbSet<Map> Maps { get; set; }
+        public virtual DbSet<Champion> Champions { get; set; }
+        public virtual DbSet<Game> Games { get; set; }
+        public virtual DbSet<GameType> GameTypes { get; set; }
+        public virtual DbSet<Map> Maps { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
