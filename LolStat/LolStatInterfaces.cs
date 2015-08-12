@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using DAL.Model;
+using LolStat.Models;
 
 namespace LolStat
 {
@@ -29,5 +30,11 @@ namespace LolStat
         ICollection<Champion> GetChampions();
         ICollection<GameType> GetGameTypes();
         ICollection<Map> GetMaps();
+    }
+
+    public interface IDataLoader
+    {
+        ICollection<Game> LoadGames();
+        ICollection<ChampInfo> LoadChampInfos();
     }
 }

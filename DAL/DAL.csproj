@@ -64,7 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ContextFactory.cs" />
-    <Compile Include="LolStatInterfaces.cs" />
+    <Compile Include="DALInterfaces.cs" />
     <Compile Include="Model\Champion.cs" />
     <Compile Include="Model\Game.cs" />
     <Compile Include="Model\GameType.cs" />

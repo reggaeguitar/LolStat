@@ -101,8 +101,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="LolStatInterfaces.cs" />
+    <Compile Include="Models\ChampInfo.cs" />
     <Compile Include="Models\DatabaseChecker.cs" />
     <Compile Include="Models\DatabaseSeeder.cs" />
+    <Compile Include="Models\DataLoader.cs" />
     <Compile Include="Models\Extensions.cs" />
     <Compile Include="Models\SeedDataReader.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
