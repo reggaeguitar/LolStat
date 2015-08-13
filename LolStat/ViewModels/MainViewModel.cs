@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Input;
-using DAL.Model;
+﻿using DAL.Model;
 using DataImporter;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.CommandWpf;
+using LolStat.Models;
+using System.Collections.ObjectModel;
+using System.Windows;
+using System.Windows.Input;
 
 namespace LolStat.ViewModels
 {
@@ -68,6 +63,18 @@ namespace LolStat.ViewModels
                 RaisePropertyChanged(() => Games);
             }
         }
+
+        private ObservableCollection<ChampInfo> _champInfos;
+        public ObservableCollection<ChampInfo> ChampInfos
+        {
+            get { return _champInfos; }
+            set
+            {
+                if (_champInfos == value) return;
+                _champInfos = value;
+                RaisePropertyChanged(() => ChampInfos);
+            }
+        }
         
         #endregion
 
@@ -91,6 +98,7 @@ namespace LolStat.ViewModels
         private void RefreshAll()
         {
             Games = new ObservableCollection<Game>(_dataLoader.LoadGames());
+            ChampInfos = new ObservableCollection<ChampInfo>(_dataLoader.LoadChampInfos());
         }
     }
 }
