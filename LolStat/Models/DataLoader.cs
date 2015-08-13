@@ -43,7 +43,11 @@ namespace LolStat.Models
                     curInfo.AverageGold = champ.Average(x => x.Gold);
                     curInfo.AverageKills = champ.Average(x => x.Kills);
                     curInfo.AverageLevel = champ.Average(x => x.Level);
-                    // curInfo.AverageTime = champ.Average(x => x.Time); // todo implement
+
+                    // from http://stackoverflow.com/questions/8847679/find-average-of-collection-of-timespans
+                    double doubleAverageTicks = champ.Average(x => x.Time.Ticks);
+                    long longAverageTicks = Convert.ToInt64(doubleAverageTicks);
+                    curInfo.AverageTime = new TimeSpan(longAverageTicks);
 
                     curInfo.MaxAssists = champ.Max(x => x.Assists);
                     curInfo.MaxCreepScore = champ.Max(x => x.CreepScore);
@@ -68,7 +72,9 @@ namespace LolStat.Models
                     curInfo.TotalGold = champ.Sum(x => x.Gold);
                     curInfo.TotalKills = champ.Sum(x => x.Kills);
                     curInfo.TotalLevel = champ.Sum(x => x.Level);
-                    // curInfo.TotalTime = champ.Sum(x => x.Time); // todo implement
+
+                    // from http://stackoverflow.com/questions/4703046/sum-of-timespans-in-c-sharp
+                    curInfo.TotalTime = new TimeSpan(champ.Sum(r => r.Time.Ticks));
 
                     champInfos.Add(curInfo);
                 }

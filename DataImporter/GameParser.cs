@@ -43,13 +43,18 @@ namespace DataImporter
                         ? new TimeSpan(timeLine[0], timeLine[1], timeLine[2])
                         : new TimeSpan(0, timeLine[0], timeLine[1]);
                     var date = DateTime.Parse(lines[++i]);
+
+                    var champId = ctx.Champions.Single(x => x.Name == champ).ID;
+                    var mapId = ctx.Maps.Single(x => x.Name == map).ID;
+                    var gameTypeId = ctx.GameTypes.Single(x => x.Name == gameType).ID;
+
                     var newGame = new Game
                     {
                         Level = level,
                         Assists = assists,
-                        ChampionID = ctx.Champions.Single(x => x.Name == champ).ID,
-                        MapID = ctx.Maps.Single(x => x.Name == map).ID,
-                        GameTypeID = ctx.GameTypes.Single(x => x.Name == gameType).ID,
+                        ChampionID = champId,
+                        MapID = mapId,
+                        GameTypeID = gameTypeId,
                         Kills = kills,
                         Deaths = deaths,
                         Date = date,

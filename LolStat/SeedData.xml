@@ -11,6 +11,7 @@
     <gameType>U.R.F. (Blind Draft)</gameType>
     <gameType>Ranked Team</gameType>
     <gameType>Legend of the Poro King</gameType>
+    <gameType>Hexakill</gameType>
   </gameTypes>
   <maps>
     <map>Summoner's Rift</map>
