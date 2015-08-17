@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         xmlns:command="http://www.galasoft.ch/mvvmlight"
-        Title="LolStat Version Alpha UI Mockup" Height="840" Width="1510" >
+        Title="LolStat Version 1.0" Height="840" Width="1510" ResizeMode="NoResize">
     
     <i:Interaction.Triggers>
         <i:EventTrigger EventName="Loaded">
@@ -14,30 +14,34 @@
     <Grid>
         <TabControl HorizontalAlignment="Left" Height="800" VerticalAlignment="Top" Width="1500">
             <TabItem Header="Welcome">
-                <Grid Background="#FFE5E5E5">
-                    <TextBlock TextWrapping="Wrap" FontSize="20" Width="550">
+                <Grid>
+                	<Grid.ColumnDefinitions>
+                		<ColumnDefinition Width="23*"/>
+                		<ColumnDefinition Width="226*"/>
+                	</Grid.ColumnDefinitions>
+                    <TextBlock TextWrapping="Wrap" FontSize="40" Width="1200" Grid.Column="1">
                         Welcome to LolStat! To get started browse to your match history at leagueoflegends.com. Keep scrolling down
                         until your entire match history is displayed. Highlight all the text (or press ctrl + A) then copy the text.
-                        Navigate to the Import tab, paste in the text and click the import button. After your data has been imported
+                        Navigate to the Import tab, paste in the text and click the Import button. After your data has been imported
                         click on the Games tab to see a list of all your games or click on the Champions tab to see statistics
                         on a per champion basis! Enjoy!
                     </TextBlock>
                 </Grid>
             </TabItem>
             <TabItem Header="Import">
-                <Grid Background="#FFE5E5E5">
+                <Grid>
                     <StackPanel>
                         <TextBox Height="700"
                                  Text="{Binding ImportText, UpdateSourceTrigger=PropertyChanged}"
                                  TextWrapping="Wrap"
                                  AcceptsReturn="True"/>
-                        <Button Height="40" Command="{Binding ImportCommand}">Import</Button>
+                        <Button Height="40" Command="{Binding ImportCommand}" >Import</Button>
                     </StackPanel>
                 </Grid>
             </TabItem>
             <TabItem Header="Games">
                 <ScrollViewer HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible">
-                    <Grid Background="#FFE5E5E5">
+                    <Grid>
                         <DataGrid AutoGenerateColumns="False" Width="1500" ItemsSource="{Binding Games}">
                             <DataGrid.Columns>
                                 <DataGridTextColumn Header="Champion" Binding="{Binding Champion.Name}" />
@@ -57,7 +61,7 @@
                 </ScrollViewer>
             </TabItem>
             <TabItem Header="Champions">
-                    <Grid Background="#FFE5E5E5">
+                    <Grid>
                         <DataGrid AutoGenerateColumns="True" Width="1500" ItemsSource="{Binding ChampInfos}">
                         </DataGrid>
                     </Grid>
